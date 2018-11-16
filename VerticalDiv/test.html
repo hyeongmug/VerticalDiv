@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {padding:0;margin:0;}
+        .block1 {background:gold;}
+        .block2 {background:red;}
+        .block3 {background:blue;}
+        .block4 {background:skyblue;}
+        .block5 {background:purple;}
+        .block6 {background:brown;}
+
+        .block.active { animation:activeAni 0.3s forwards;}
+
+        @keyframes activeAni {
+            0%,100% {
+                transform:scale(1);
+            }
+            50% {
+                transform:scale(0.5);
+            }
+
+        }
+
+        .btns { position: fixed; right:10px; top:50px;  }
+        .btn { transition:0.3s;  }
+        .btn.active { background:black; color:white; }
+    </style>
+</head>
+<body>
+    <div class="block block1 active">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="block block2">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="block block3">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="block block4">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="block block5">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="block block6">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+    <div class="btns">
+        <button class="btn active" onclick="vertScrl.moveAni(0)">0</button>
+        <button class="btn"  onclick="vertScrl.moveAni(1)">1</button>
+        <button class="btn"  onclick="vertScrl.moveAni(2)">2</button>
+        <button class="btn" onclick="vertScrl.moveAni(3)">3</button>
+        <button class="btn" onclick="vertScrl.moveAni(4)">4</button>
+        <button class="btn" onclick="vertScrl.moveAni(5)">5</button>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="VerticalDiv.js"></script>
+    <script>
+    
+        var vertScrl = new VerticalDiv({
+            duration: 300,
+            blockClassName: '.block',
+            btn: '.btn'
+        });
+
+    </script>
+</body>
+</html>
