@@ -137,7 +137,7 @@ function VerticalDiv(options) { // 재사용 모듈화를 위해서는 function�
 
 
     // 스크롤 이벤트
-    doc.on('scroll', function(e) {
+    win.on('scroll', function(e) {
 
         var blockSizeArray = self.getArrayblockSize(); // 각 .block의 사이즈를 구해옴
         var scrollTop = win.scrollTop(); // 위도우가 얼마나 스크롤 하고 있는지도 구하고.
@@ -153,6 +153,7 @@ function VerticalDiv(options) { // 재사용 모듈화를 위해서는 function�
                 // 이건 글로 설명하기 애매하고 그림으로 설명해야 이해가 잘됨... 
 
                 current = i;
+                self.activeBlockAndBtn(current);
             }
 
         }
