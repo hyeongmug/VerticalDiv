@@ -1,3 +1,5 @@
+/* https://github.com/hyeongmug/VerticalDiv */
+
 function VerticalDiv(options) { // 재사용 모듈화를 위해서는 function으로 묶어주어야함
 
     // 이름은 VerticalDiv라고 지었음 ㅋㅋㅋ
